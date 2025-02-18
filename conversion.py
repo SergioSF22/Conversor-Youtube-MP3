@@ -7,25 +7,36 @@ def download_youtube_audio(youtube_url, output_directory):
     :param youtube_url: URL del video o playlist de YouTube.
     :param output_directory: Directorio donde se guardarán los archivos MP3.
     """
-    
+    # Crea el directorio de salida si no existe
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
     
+    # Configuración de la descarga
     ydl_opts = {
-        'format': 'bestaudio/best',
+        'format': 'bestaudio/best', # Selecciona la mejor calidad de audio
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
             'preferredquality': '192',
-        }],
-        'outtmpl': os.path.join(output_directory, '%(playlist_title)s/%(title)s.%(ext)s'),
-        'quiet': False,
-        'noplaylist': False  # Permite descargar playlists completas
+        }], # Selecciona el formato de audio deseado
+        'outtmpl': os.path.join(output_directory, '%(playlist_title)s/%(title)s.%(ext)s'), # Define el nombre del archivo de salida
+        'quiet': False, # Desactiva el modo quiet para mostrar mensajes de ejecución mas detallados
+        'noplaylist': False # Permite descargar playlists completas
     }
-    
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        ydl.download([youtube_url])
+    # Ejecuta la descarga y la conversión con un manejo de errores
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([youtube_url])
+    except yt_dlp.utils.DownloadError as e:
+        print(f"Error de descarga: {e}")
+    except yt_dlp.utils.ExtractorError as e:
+        print(f"Error al extraer información: {e}")
+    except yt_dlp.utils.PostProcessingError as e:
+        print(f"Error en el postprocesado: {e}")
+    except Exception as e:
+        print(f"Error inesperado: {e}")
 
+# Programa principal
 if __name__ == "__main__":
     output_directory = input("Ingrese el directorio de descarga: ")
     while True:
