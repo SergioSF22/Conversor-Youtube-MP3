@@ -8,13 +8,16 @@ Este conversor proporciona una solución de descarga y conversión de videos de 
 
 ## Funcionalidades
 
-- **Conversión de videos y playlist:** Puedes convertir practicamente cualquier video de Youtube a formato MP3 proporcionando la URL. También puedes convertir Playslist enteras de la misma manera.
+- **Conversión de videos y playlist:** Puedes convertir practicamente cualquier video de Youtube a formato MP3, WAV o MP4 proporcionando la URL. También puedes convertir Playslist enteras de la misma manera.
 
 - **Calidad máxima:** La configuración de la conversión está diseñada de manera que obtengas la mejor calidad de audio al realizarla.
 
 - **Modos:** Contiene dos modos diferentes de uso:
-    - **Por consola:** Ejecutando el fichero de nombre *conversion.py* se realizara la ingresión de datos por consola.
-    - **Por interfaz gráfica:** Ejecutando el fichero de nombre *conversion_IU.py* se realizara la ingresión de los datos por una interfaz gráfica simple implementada por la librería TKinter.
+    - **Por consola:** Ejecutando el fichero de nombre *conversion(ext).py* se realizara la ingresión de datos por consola.
+        - **conversionMP3.py:** Realiza la conversión a MP3.
+        - **conversionWAV.py:** Realiza la conversión a WAV.
+        - **conversionMP4.py:** Realiza la conversión a MP4.
+    - **Por interfaz gráfica (solo MP3):** Ejecutando el fichero de nombre *conversion_IU.py* se realizara la ingresión de los datos por una interfaz gráfica simple implementada por la librería TKinter.
 
 ## Dependencias
 
@@ -46,7 +49,7 @@ Para usar el conversor primero hay que instalar ciertas herramientas:
     - Selecciona la carpeta destino donde guardar los archivos mediante el boton *'Seleccionar'* o introduciendo la ruta relativa o absoluta en el cuadro de texto debajo de la etiqueta *'Directorio de descarga'* (Si la carpeta no existe, la creará).
     - Pulsa el botón *'Descargar'*.
 
-¡Disfruta de tu videos en mp3!
+¡Disfruta de tu videos en el formato deseado!
 
 ## Factores a tener en cuenta
 
