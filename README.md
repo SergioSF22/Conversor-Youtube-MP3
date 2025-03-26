@@ -10,13 +10,10 @@ Este conversor proporciona una solución de descarga y conversión de videos de 
 
 - **Conversión de videos y playlist:** Puedes convertir practicamente cualquier video de Youtube a formato MP3, WAV o MP4 proporcionando la URL. También puedes convertir Playslist enteras de la misma manera.
 
-- **Calidad máxima:** La configuración de la conversión está diseñada de manera que obtengas la mejor calidad de audio al realizarla.
+- **Calidad máxima:** La configuración de la conversión está diseñada de manera que obtengas la mejor calidad del formato seleccionado al realizarla.
 
 - **Modos:** Contiene dos modos diferentes de uso:
-    - **Por consola:** Ejecutando el fichero de nombre *conversion(ext).py* se realizara la ingresión de datos por consola.
-        - **conversionMP3.py:** Realiza la conversión a MP3.
-        - **conversionWAV.py:** Realiza la conversión a WAV.
-        - **conversionMP4.py:** Realiza la conversión a MP4.
+    - **Por consola:** Ejecutando el fichero de nombre *conversion.py* se realizara la ingresión de datos por consola.
     - **Por interfaz gráfica (solo MP3):** Ejecutando el fichero de nombre *conversion_IU.py* se realizara la ingresión de los datos por una interfaz gráfica simple implementada por la librería TKinter.
 
 ## Dependencias
@@ -42,6 +39,7 @@ Para usar el conversor primero hay que instalar ciertas herramientas:
     - Dirigete a la carpeta del proyecto y abre una terminal.
     - Ejecuta el comando ```python .\conversion.py``` o  ```py .\conversion.py```
     - Introduce la ruta absoluta o relativa de la carpeta donde quieres guardar los archivos convertidos (Si la carpeta no existe, la creará).
+    - Selecciona el formato de conversión deseado (MP3, WAV, MP4)
     - Introduce la URL del vídeo o playlist que deseas convertir.
     - Una vez acabada la conversión decide si quieres continuar o acabar el programa.
 - Si optas por la opción de **interfaz gráfica**:
