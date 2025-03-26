@@ -55,3 +55,4 @@ Para usar el conversor primero hay que instalar ciertas herramientas:
 
 - Yo he utilizado la versión de **Python 3.13.1** por lo que desconozco si la herramienta funciona en otras versiones (recomiendo instalar la misma).
 - Es posible que ciertos vídeos no puedan ser convertidos debido a restricciones regionales o privacidad de los mismos.
+- Si al realizar cualquier conversión esta va muy lenta y aparece un **WARNING** que dice lo siguiente: ```Signature extraction failed: Some formats may be missing```. Siginifica que YouTube ha cambiado su sistema de encriptación de firmas, lo que requiere una actualización de la biblioteca de ```yt_dlp```. (Comando: ```pip install -U yt-dlp```)
